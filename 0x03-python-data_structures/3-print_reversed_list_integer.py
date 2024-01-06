@@ -3,5 +3,5 @@
 def print_reversed_list_integer(my_list=[]):
     my_list.reverse()
     for i in my_list:
-        print(i)
+        print("{:d}".format(i))
     return my_list
