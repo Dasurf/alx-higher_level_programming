@@ -7,4 +7,3 @@ def no_c(my_string):
             arr.remove(i)
             my_string = ''.join(map(str, arr))
     return my_string
-
