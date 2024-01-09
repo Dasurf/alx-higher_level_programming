@@ -1,2 +1,3 @@
-alphabets = "abcdefghijklmnopqrstuvwxyz"
-print(alphabets.upper())
+#!/usr/bin/python3
+import string
+print(string.ascii_uppercase)
