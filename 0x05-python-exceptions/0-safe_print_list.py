@@ -3,11 +3,11 @@
 def safe_print_list(my_list=[], x=0):
     if x:
         try:
-            l = 0
+            length = 0
             for item in my_list:
-                l += 1
-            if x > l:    
-                x = l
+                length += 1
+            if x > length:
+                x = length
             for i in range(x):
                 print(my_list[i], end="")
             print()
