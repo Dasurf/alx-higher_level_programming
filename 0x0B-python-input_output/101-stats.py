@@ -33,7 +33,7 @@ Example usage:
      404: 5
      405: 4
      500: 4
-     ^CFile size: 17146
+     File size: 17146
      200: 4
      301: 3
      400: 4
