@@ -8,5 +8,5 @@ class Rectangle {
   }
 }
 
-// module.exports = Rectangle;
-export default Rectangle;
+module.exports = Rectangle;
+// export default Rectangle;
