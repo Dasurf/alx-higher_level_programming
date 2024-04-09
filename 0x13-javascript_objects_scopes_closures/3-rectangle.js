@@ -16,11 +16,8 @@ class Rectangle {
       for (let i = 1; i <= w; i++) {
         str += 'X';
       }
-      if (j !== h) {
-        str += '\n';
-      }
+      console.log(str);
     }
-    return str;
   }
 }
 
