@@ -1,4 +1,3 @@
 #!/bin/bash
-# sends a JSON POST request to a URL passed as the first argument,
-# and displays the body of the response.
+# sends JSON POST request to URL passed as first arg, display body of response.
 curl -sX POST -H "Content-Type: application/json" -d @"$2" "$1"
