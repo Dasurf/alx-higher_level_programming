@@ -3,23 +3,26 @@ import requests
 import sys
 
 # Define the URL
-url = 'http://0.0.0.0:5000/dasurf'
+"""Sends a POST request to http://0.0.0.0:5000/search_user with a given letter.
 
-# Define the letter parameter
-if len(sys.argv) == 1:
-    q = ""
-else:
-    q = sys.argv[1]
+Usage: ./8-json_api.py <letter>
+  - The letter is sent as the value of the variable `q`.
+  - If no letter is provided, sends `q=""`.
+"""
+import sys
+import requests
 
-# Send a POST request with the letter parameter
-response = requests.post(url, data={'q': q})
 
-# Check if the response body is properly JSON formatted and not empty
-try:
-    data = response.json()
-    if data:
-        print("[{}] {}".format(data['id'], data['name']))
-    else:
-        print("No result")
-except ValueError:
-    print("Not a valid JSON")
+if __name__ == "__main__":
+    letter = "" if len(sys.argv) == 1 else sys.argv[1]
+    payload = {"q": letter}
+
+    r = requests.post("http://0.0.0.0:5000/search_user", data=payload)
+    try:
+        response = r.json()
+        if response == {}:
+            print("No result")
+        else:
+            print("[{}] {}".format(response.get("id"), response.get("name")))
+    except ValueError:
+        print("Not a valid JSON")
